@@ -35,48 +35,70 @@ The Daily Notes project is a web application that allows users to create, manage
 ## Running the Application
 ### Backend
 1.Clone the repository:
->git clone https://github.com/talentcoco0619/note-taking-app.git
->cd note-taking-app
+```bash
+git clone https://github.com/talentcoco0619/note-taking-app.git
+cd note-taking-app
+```
 
 2.Install Python dependencies:
-> cd backend
-> python -m venv venv
-> venv/Scripts/activate
-> pip install -r requirement.txt
+
+```bash
+cd backend
+python -m venv venv
+venv/Scripts/activate
+pip install -r requirement.txt
+```
 
 3.Set up the MySQL database:
 - Make sure you have MySQL installed and running.
 - Create a database named daily_notes (or use the name defined in settings.py).
 - Apply migrations:
-> python manage.py makemigrations
-> python manage.py migrate
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
 4.Start the backend server:
->python manage.py runserver
-
+```bash
+python manage.py runserver
+```
 
 ### Frontend
 1.Navigate to the frontend directory:
->cd frontend
+```bash
+cd frontend
+```
 
 2.Install npm dependencies:
-> npm install
+```bash
+npm install
+```
 
 3.Environment:
 .env
 VITE_API_URL="Backend base url"
 
-> npm run dev
+```bash
+npm run dev
+```
 
 4.Run the frontend development server:
-> npm run dev
+```bash
+npm run dev
+```
 
 ##Testing
 - Frontend Tests (Cypress):
 To run the frontend tests with Cypress:
-> npm run cy:open
+```bash
+npm run cy:open
+```
 
 - Backend Tests (pytest):
->pytest
+```bash
+pytest
+```
+
 http://localhost:8000/redocs/
 http://localhost:8000/swagger/
