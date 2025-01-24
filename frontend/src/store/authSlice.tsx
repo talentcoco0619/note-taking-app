@@ -73,6 +73,7 @@ const authSlice = createSlice({
     logoutUser: (state) => {
       state.isAuthenticated = false;
       state.token = null;
+      state.success = false
       setAuthHeader("")
       localStorage.removeItem('token');
       localStorage.removeItem('username');
