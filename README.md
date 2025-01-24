@@ -76,7 +76,9 @@ npm install
 ```
 
 3.Environment:
+
 .env
+
 VITE_API_URL="Backend base url"
 
 ```bash
@@ -88,8 +90,9 @@ npm run dev
 npm run dev
 ```
 
-##Testing
+## Testing
 - Frontend Tests (Cypress):
+
 To run the frontend tests with Cypress:
 ```bash
 npm run cy:open
@@ -101,4 +104,5 @@ pytest
 ```
 
 http://localhost:8000/redocs/
+
 http://localhost:8000/swagger/
