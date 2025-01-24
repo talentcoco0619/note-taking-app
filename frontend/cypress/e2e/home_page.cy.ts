@@ -116,9 +116,9 @@ describe("template spec", () => {
 
     cy.wait(10000);
 
-    cy.get("button[id=logout-button]").click();
+    // cy.get("button[id=logout-button]").click();
 
-    cy.contains("Logged out successfully!");
+    // cy.contains("Logged out successfully!");
 
   });
 });

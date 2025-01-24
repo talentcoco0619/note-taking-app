@@ -5,9 +5,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser } from '../store/authSlice'; // Updated import
 import { RootState } from '../store'; // Import RootState for useSelector
-
+import { AppDispatch } from '../store';
 const RegisterPage: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
   const { loading, success } = useSelector((state: RootState) => state.auth); // Updated to use auth state
