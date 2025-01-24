@@ -61,7 +61,7 @@ class LoginUserView(views.APIView):
             # Get the user by email
             user = User.objects.get(email=email)
             if not user.is_active:
-                return Response({'error': 'Account is not active. Please wait for approval.'}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({'error': 'Account is not active.'}, status=status.HTTP_400_BAD_REQUEST)
             # Check the password for the user
             if user.check_password(password):
                 # If password is correct, generate tokens
