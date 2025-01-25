@@ -7,14 +7,14 @@ The Daily Notes project is a web application that allows users to create, manage
 - Users can create, read, update, and delete their notes
 - Audio recording and playback integrated via react-audio-voice-recorder
 - Only authenticated users can perform CRUD operations
-- Backend testing with pytest and frontend testing with Cypress
+- Backend testing with pytest and frontend testing with jest
 - Admin page for managing user is_active field is not built (can be set directly in the DBMS)
 
 ## Assumptions
 - Admin Management of User Status: The is_active field, which controls user login access, can be toggled directly in the database. There is no admin interface to manage this.
 - Audio Recording: The frontend utilizes the react-audio-voice-recorder module to allow users to record voice and attach it to their notes.
 - Database: MySQL is used for data storage. The schema includes user and note models.
-- Testing: Automated end-to-end tests are written with Cypress for the frontend and pytest for the backend.
+- Testing: Automated unit tests are written with jest for the frontend and pytest for the backend.
 
 ## Technical Design & Architecture
 ### Backend
@@ -91,9 +91,9 @@ npm run dev
 ```
 
 ## Testing
-- Frontend Tests (Cypress):
+- Frontend Tests (jest):
 
-To run the frontend tests with Cypress:
+To run the frontend tests with jest:
 ```bash
 npm run cy:open
 ```
