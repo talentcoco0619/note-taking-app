@@ -13,7 +13,7 @@ The Daily Notes project is a web application that allows users to create, manage
 ## Assumptions
 - Admin Management of User Status: The is_active field, which controls user login access, can be toggled directly in the database. There is no admin interface to manage this.
 - Audio Recording: The frontend utilizes the react-audio-voice-recorder module to allow users to record voice and attach it to their notes.
-- Database: MySQL is used for data storage. The schema includes user and note models.
+- Database: PostgreSQL is used for data storage. The schema includes user and note models.
 - Testing: Automated unit tests are written with jest for the frontend and pytest for the backend.
 
 ## Technical Design & Architecture
@@ -32,7 +32,13 @@ The Daily Notes project is a web application that allows users to create, manage
 - State Management: React's built-in state management is used along with hooks for component-level state.
 
 
-## Running the Application
+## Running the Application(with Docker command)
+```bash
+docker-compose up -d --build
+```
+
+## Running the Application(without Docker command)
+
 ### Backend
 1.Clone the repository:
 ```bash
@@ -49,8 +55,8 @@ venv/Scripts/activate
 pip install -r requirement.txt
 ```
 
-3.Set up the MySQL database:
-- Make sure you have MySQL installed and running.
+3.Set up the PostgreSQL database:
+- Make sure you have PgAdmin installed and running.
 - Create a database named daily_notes (or use the name defined in settings.py).
 - Apply migrations:
 
