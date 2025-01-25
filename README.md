@@ -95,7 +95,7 @@ npm run dev
 
 To run the frontend tests with jest:
 ```bash
-npm run cy:open
+npm run test
 ```
 
 - Backend Tests (pytest):
