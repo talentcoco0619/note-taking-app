@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'daily_notes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'daily_notes',  # Replace with your database name
-        'USER': 'root',     # Replace with your MySQL username
-        'PASSWORD': '',  # Replace with your MySQL password
-        'HOST': 'localhost',  # Or the hostname if not running locally
-        'PORT': '3306',  # Default MySQL port
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',     # Replace with your database name
+        'USER': 'postgres',     # Replace with your postgres user
+        'PASSWORD': 'postgres', # Replace with your postgres password
+        'HOST': 'db',           # Or the hostname if not running locally
+        'PORT': '5432',         # Default Postgres port
     }
 }
 
