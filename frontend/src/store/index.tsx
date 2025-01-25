@@ -2,8 +2,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './authSlice'; // Updated import
 import noteReducer from './noteSlice';
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL;
-axios.defaults.baseURL = API_URL;
+import { config } from '../../config';
+
+axios.defaults.baseURL = config.API_URL;
 
 const store = configureStore({
     reducer: {

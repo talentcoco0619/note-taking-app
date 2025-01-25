@@ -52,6 +52,7 @@ const LoginPage: React.FC = () => {
 
           <Form.Item>
             <Button
+              name='login'
               type="primary"
               htmlType="submit"
               block
