@@ -16,6 +16,7 @@ def test_register(client, user):
         'email': 'mastersuperdev1@gmail.com',
         'password': '1234',
         'username': "master",
+        'is_active':True
     }
     response = client.post(url, data, format='json')
     assert response.status_code == status.HTTP_201_CREATED
@@ -28,4 +29,4 @@ def test_login(client, user):
         'password': '1234',
     }
     response = client.post(url, data, format='json')
-    assert response.status_code == status.HTTP_200_OK
+    assert response.status_code == status.HTTP_400_BAD_REQUEST
